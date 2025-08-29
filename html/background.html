@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Profile</title>
+  <style>
+    .container {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;  /* horizontally center */
+      align-items: center;      /* vertically center */
+      background: linear-gradient(to right, #4facfe, #43e97b);
+      font-family: Arial, sans-serif;
+    }
+
+    .profile-wrapper {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      max-width: 900px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .profile-img {
+      text-align: center;
+    }
+
+    .profile-img img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .info-table td {
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .other-info {
+      margin-top: 20px;
+    }
+    
+   
+  
+  </style>
+</head>
+<body>
+ 
+<div class="container">
+ 
+
+
+  <div class="profile-wrapper">
+    <!-- Profile Card -->
+
+    <div class="card profile-img">
+      <img src="../image/jpg">
+      <h2>Ishmam Ahasan Samin</h2>
+      <p><b>Student ID:</b> 321000001</p>
+      <p><b>Class:</b> 4</p>
+      <p><b>Section:</b> A</p>
+    </div>
+
+    <!-- General Info -->
+    <div class="card">
+      <h3>📋 General Information</h3>
+      <table class="info-table">
+        <tr><td>Roll</td><td>125</td></tr>
+        <tr><td>Academic Year</td><td>2020</td></tr>
+        <tr><td>Gender</td><td>Male</td></tr>
+        <tr><td>Religion</td><td>Group</td></tr>
+        <tr><td>Blood</td><td>B+</td></tr>
+      </table>
+    </div>
+
+    <!-- Other Info -->
+    <div class="card other-info">
+      <h3>📝 Other Information</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+  </div>
+</div>  
+</body>
+</html>

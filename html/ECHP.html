@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ABC Engineering College</title>
+  <meta name="description" content="Homepage of ABC Engineering College – Programs, Admissions, Campus Life, and Contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+
+<style>
+:root{
+  --bg:#0b1220; /* deep navy */
+  --muted:#0e1a2f;
+  --card:#0f1f3c;
+  --brand:#3b82f6; /* blue */
+  --brand-600:#2563eb;
+  --text:#e6eefc;
+  --sub:#b9c7e6;
+  --ring:rgba(59,130,246,.25);
+  --maxw:1150px;
+  --radius:18px;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{
+  box-sizing:border-box;
+}
+html,body{
+  margin:0;
+  padding:0;
+  font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
+  background:linear-gradient(180deg,var(--bg),#0b1324 30%, #0a1630 100%);
+  color:var(--text);
+}
+a{
+  color:inherit;
+  text-decoration:none;
+}
+img{
+  max-width:100%;
+  display:block;
+}
+.container{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:0 20px;
+}                /* ====== NAVIGATION (Section 1) ====== */
+header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(11,18,32,.75);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #132242;
+}
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 0;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:800;
+  letter-spacing:.3px;
+
+}
+.brand .logo{
+  width:40px;
+   height:40px;
+  border-radius:12px;
+  background:linear-gradient(135deg,var(--brand),#60a5fa);
+  display:grid;
+  place-items:center;
+  box-shadow:0 6px 18px rgba(59,130,246,.45);
+}
+.brand .logo i{
+  color:white;
+}
+nav ul{
+  display:flex;
+  gap:22px;
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+nav a{
+  padding:8px 12px;
+  border-radius:10px;
+  color:var(--sub);
+  font-weight:500;
+}
+nav a:hover, nav a:focus{
+  color:var(--text);
+  background:var(--muted);
+  outline:2px solid transparent;
+  box-shadow:0 0 0 6px var(--ring);
+}
+.cta{
+  background:var(--brand);
+  color:white;
+  padding:10px 16px;
+  border-radius:12px;
+  font-weight:600;
+  box-shadow:0 8px 20px rgba(59,130,246,.35);
+}
+.cta:hover{
+  background:var(--brand-600);
+}
+
+                /* ====== HERO (Section 2) ====== */
+#hero{
+  padding:70px 0;
+}
+.hero-grid{
+   display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:36px;
+  align-items:center;
+}
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:rgba(59,130,246,.12);
+  border:1px solid rgba(59,130,246,.25);
+  padding:8px 12px;
+  border-radius:999px;
+  color:#cfe1ff;
+  font-weight:600;
+  margin-bottom:14px;
+}
+.eyebrow i{
+  color:#93c5fd;
+}
+.hero h1{
+  font-size:clamp(34px,5vw,56px);
+  line-height:1.08;
+  margin:0 0 16px;
+  font-weight:800;
+}
+.hero p{
+  color:var(--sub);
+  font-size:clamp(15px,1.8vw,18px);
+  margin:0 0 26px;
+}
+.buttons{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 18px;
+  border-radius:14px;
+  font-weight:700;
+}
+.btn.primary{
+  background:var(--brand);
+  color:white;
+  box-shadow:0 10px 22px rgba(59,130,246,.35);
+}
+.btn.primary:hover{
+  background:var(--brand-600);
+}
+.btn.ghost{
+  border:1px solid #1c2c4d;
+  background:rgba(16,31,60,.6);
+  color:var(--text);
+}
+.hero-figure{
+  position:relative;
+}
+.hero-card{
+  background:radial-gradient(1200px 280px at -10% -20%, rgba(59,130,246,.35), transparent), var(--card);
+  border:1px solid #163160;
+  border-radius:24px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.hero-card img{
+  aspect-ratio:16/10;
+  object-fit:cover;
+}
+.hero-caption{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  padding:14px 16px;
+  border-top:1px solid #173564;
+  color:#d7e6ff;
+}
+
+/* ====== PROGRAMS (Section 3) ====== */
+#programs{
+  padding:40px 0;
+}
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  margin-bottom:18px;
+}
+.section-head h2{
+  font-size:clamp(22px,3vw,32px);
+  margin:0;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+.card{
+  background:var(--card);
+  border:1px solid #163160;
+  border-radius:18px;
+  padding:18px;
+  box-shadow:var(--shadow);
+}
+.card i{
+  font-size:22px;
+}
+.card h3{
+  margin:10px 0 6px;
+  font-size:18px;
+}
+.card p{
+  margin:0;
+  color:var(--sub);
+  font-size:14px;
+}
+
+/* ====== CAMPUS LIFE (Section 4) ====== */
+#campus{
+  padding:60px 0;
+}
+.campus-grid{
+  display:grid;
+  grid-template-columns:1fr 1.1fr;
+  gap:26px;
+  align-items:center;
+}
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:#132546;
+  border:1px solid #1a3c73;
+  color:#cfe1ff;
+  border-radius:999px;
+  padding:8px 12px;
+  margin-bottom:10px;
+}
+.feature{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  background:rgba(19,42,83,.5);
+  border:1px solid #14325f;
+  padding:14px;
+  border-radius:14px;
+}
+.gallery{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:12px;
+}
+.gallery img{
+  border-radius:16px;
+  border:1px solid #14325f;
+}
+
+/* ====== FOOTER (Section 5) ====== */
+footer{
+  border-top:1px solid #132242;
+  background:#0b1220;
+  padding:40px 0;
+  margin-top:40px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:24px;
+}
+.footer-grid h4{
+  margin:0 0 8px;
+}
+.muted{
+  color:var(--sub);
+  font-size:14px;
+}
+.socials{
+  display:flex;
+  gap:10px;
+  margin-top:10px;
+}
+.socials a{
+  width:38px;
+  height:38px;
+  display:grid;
+  place-items:center;
+  border-radius:12px;
+  background:#132546;
+  border:1px solid #1a3c73;
+}
+.copyright{
+  margin-top:22px;
+  color:#93a7cf;
+  font-size:13px;
+}
+.image{
+  width: 28px !important;
+}
+#box:hover{
+  transform: scale(1.04);
+  box-shadow: 5px 8px 8px rgba(1,1,1,0.2);
+  transition: 0.2s ease-in-out;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 980px){
+  .hero-grid{grid-template-columns:1fr}
+  .campus-grid{grid-template-columns:1fr}
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width: 560px){
+  nav ul{display:none}
+  .grid{grid-template-columns:1fr}
+}
+
+</style>
+</head>
+<body>
+  <!-- ====== SECTION 1: NAVIGATION ====== -->
+  <header role="navigation" aria-label="Main Navigation">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="ABC Engineering College - Home">
+        <span class="logo" aria-hidden="true"><i class="fa-solid fa-compass-drafting"></i></span>
+        <span>ABC Engineering College</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#admissions">Admissions</a></li>
+          <li><a href="#contact" class="cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>  <!-- ====== SECTION 2: HERO ====== -->  <main id="home" class="container" role="main">
+    <section id="hero" class="hero">
+      <div class="hero-grid">
+        <div style="margin-top: -25px;">
+          <span class="eyebrow"><i class="fa-solid fa-bolt"></i> Future-Ready Engineers</span>
+          <h1>Innovate. Build. Lead.</h1>
+          <p>ABC Engineering College empowers students to solve real-world problems with cutting‑edge labs, industry mentors, and a vibrant campus life.</p>
+          <div class="buttons" style="margin-top: 45px;">
+            <a class="btn primary" href="#admissions"><i class="fa-solid fa-pen-to-square"></i> Apply Now</a>
+            <a class="btn ghost" href="#programs" id="box"><i class="fa-solid fa-diagram-project"></i> Explore Programs</a>
+          </div>
+        </div>
+        <div class="hero-figure">
+          <figure class="hero-card" aria-label="Campus building and students">
+            <img src="../image/web.png" id="image" alt="Students collaborating in modern engineering lab" / style="width: 508px !important">
+            <figcaption class="hero-caption">
+              <i class="fa-solid fa-microchip"></i>
+              <span>Hands-on learning in AI, Robotics & IoT</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section><!-- ====== SECTION 3: PROGRAMS ====== -->
+<section id="programs" aria-labelledby="programs-title">
+  <div class="section-head">
+    <h2 id="programs-title">Programs We Offer</h2>
+    <a href="#admissions" class="btn ghost" id="box">Admissions Guide</a>
+  </div>
+  <div class="grid" role="list" style="margin-top: 45px;">
+    <article class="card" role="listitem" id="box">
+      <i class="fa-solid fa-code"></i>
+      <h3>B.Tech – Computer Science</h3>
+      <p>AI/ML, Data Structures, Cloud Computing, and full‑stack development with industry projects.</p>
+    </article>
+    <article class="card" role="listitem" id="box">
+      <i class="fa-solid fa-gears"></i>
+      <h3>B.Tech – Mechanical Engineering</h3>
+      <p>Manufacturing, CAD/CAM, Thermal Sciences, and robotics with modern workshops.</p>
+    </article>
+    <article class="card" role="listitem" id="box">
+      <i class="fa-solid fa-city"></i>
+      <h3>B.Tech – Civil Engineering</h3>
+      <p>Structural design, smart cities, sustainable materials, and on‑site internships.</p>
+    </article>
+    <article class="card" role="listitem" id="box">
+      <i class="fa-solid fa-chart-line"></i>
+      <h3>MBA – Technology Management</h3>
+      <p>Leadership, analytics, product strategy, and entrepreneurship for tech‑driven careers.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ====== SECTION 4: CAMPUS LIFE ====== -->
+<section id="campus" aria-labelledby="campus-title">
+  <div class="campus-grid">
+    <div>
+      <span class="pill" id="box"><i class="fa-solid fa-planet-ringed"></i> Life @ ABC</span>
+      <h2 id="campus-title">A Campus That Inspires</h2>
+      <p class="muted">Clubs, hackathons, sports, cultural fests, and community initiatives—there’s always something to explore. Learn beyond classrooms with mentors and peers.</p>
+      <div class="feature" id="box" style="margin-top: 45px;">
+        <i class="fa-solid fa-book-open"></i>
+        <div>
+          <strong>Library & Research</strong>
+          <p class="muted">100k+ volumes, digital journals, maker spaces and 24×7 study zones.</p>
+        </div>
+      </div>
+      <div class="feature" id="box">
+        <i class="fa-solid fa-house"></i>
+        <div>
+          <strong>Hostel & Dining</strong>
+          <p class="muted">Safe on‑campus housing with nutritious meals and high‑speed Wi‑Fi.</p>
+        </div>
+      </div>
+      <div class="feature" id="box">
+        <i class="fa-solid fa-basketball"></i>
+        <div>
+          <strong>Sports & Wellness</strong>
+          <p class="muted">Indoor arenas, gym, track, and wellness programs led by coaches.</p>
+        </div>
+      </div>
+    </div>
+    <div class="gallery" aria-label="Campus photo gallery" >
+      <img src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?q=80&w=1200&auto=format&fit=crop" alt="Students walking across campus" />
+      <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop" alt="Modern library interior" />
+      <img src="../image/web.png" alt="Engineering workshop with equipment" />
+    </div>
+  </div>
+</section>
+
+<!-- ====== SECTION 5: FOOTER ====== -->
+<section id="contact"></section>
+
+  </main>  <footer aria-labelledby="footer-title">
+    <div class="container footer-grid">
+      <div>
+        <h4 id="footer-title">ABC Engineering College</h4>
+        <p class="muted">Shaping ethical innovators for a better tomorrow.</p>
+        <div class="socials" aria-label="Social links" >
+          <a href="#" aria-label="Facebook" id="box"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Twitter" id="box"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Instagram" id="box"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="LinkedIn" id="box"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+        </div>
+        <p class="copyright">© <span id="year"></span> ABC Engineering College. All rights reserved.</p>
+      </div>
+      <div id="about">
+        <h4>About</h4>
+        <p class="muted">NAAC accredited, industry‑aligned curriculum, global alumni network, and dedicated placement cell.</p>
+      </div>
+      <div id="admissions">
+        <h4>Admissions</h4>
+        <p class="muted">Applications open for the 2025‑26 session. For queries, write to <a href="mailto:admissions@abcec.edu">admissions@abcec.edu</a> or call <a href="tel:+911234567890">+91 12345 67890</a>.</p>
+      </div>
+    </div>
+  </footer>  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script></body>
+</html>
+</body>
+</html>
